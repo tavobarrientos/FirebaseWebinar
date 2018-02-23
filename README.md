@@ -1,3 +1,3 @@
-# FirebaseWebminar
+# FirebaseWebinar
 
-Código de Ejemplo del Webminar de Firebase para Realtime Database
+Código de Ejemplo del Webinar de Firebase para Realtime Database
