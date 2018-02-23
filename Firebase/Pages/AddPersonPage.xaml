@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:Firebase.ViewModel"
+    x:Class="Firebase.Pages.AddPersonPage"
+    Title="Agregar Persona">
+    <ContentPage.BindingContext>
+        <viewModel:AddPersonViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="savePerson" Text="Guardar" Command="{Binding SavePersonCommand}" />
+    </ContentPage.ToolbarItems>
+	<ContentPage.Content>
+        <TableView>
+            <TableSection Title="Agregar Persona">
+                <EntryCell Label="Nombre" Placeholder="Tu Nombre" Text="{Binding Person.FirstName}" Keyboard="Text" />
+                <EntryCell Label="Apellido" Placeholder="Tu Apellido" Text="{Binding Person.LastName}" Keyboard="Text" />
+                <EntryCell Label="Correo Electrónico" Placeholder="Tu Correo" Text="{Binding Person.Email}" Keyboard="Email" />
+            </TableSection>
+        </TableView>
+	</ContentPage.Content>
+</ContentPage>
